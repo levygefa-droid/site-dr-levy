@@ -1,93 +1,237 @@
 <!DOCTYPE html><html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dr. Levy de Aguiar Pontes | Médico em Fortaleza</title>
-<meta name="description" content="Consulta médica particular em Fortaleza com Dr. Levy de Aguiar Pontes. Especialista em Medicina Interna e Diagnóstica com atendimento humanizado e investigação clínica detalhada."><meta name="google-site-verification" content="uaP1oCpwyUjrR799nOf2RbM8Pkxb10s6ObS48702ezc" /><style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Levy de Aguiar Pontes | Médico em Fortaleza</title>
+<meta name="description" content="Consulta médica particular em Fortaleza com Dr. Levy de Aguiar Pontes. Medicina Interna, diagnóstico clínico preciso e atendimento humanizado." />
+<meta name="google-site-verification" content="uaP1oCpwyUjrR799nOf2RbM8Pkxb10s6ObS48702ezc" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+:root{
+--primary:#0f766e;
+--secondary:#16a34a;
+--dark:#0f172a;
+--light:#f8fafc;
+--text:#1f2937;
+}
 
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f7f6;color:#1f2937}
+*{box-sizing:border-box}
 
-header{background:linear-gradient(135deg,#0f766e,#115e59);color:white;padding:90px 20px;text-align:center}
+body{
+font-family:'Inter',sans-serif;
+margin:0;
+background:var(--light);
+color:var(--text);
+line-height:1.6
+}
 
-h1{font-size:42px;margin-bottom:10px}
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:30px;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+z-index:100
+}
 
-h2{color:#0f766e;margin-top:0}
+nav a{
+text-decoration:none;
+font-weight:600;
+color:var(--primary);
+font-size:15px
+}
 
-nav{background:white;box-shadow:0 3px 10px rgba(0,0,0,0.05);padding:15px 20px;text-align:center}
+.hero{
+background:linear-gradient(135deg,#0f766e,#0d9488);
+color:white;
+padding:120px 20px;
+text-align:center
+}
 
-nav a{margin:0 15px;text-decoration:none;color:#0f766e;font-weight:bold}
+.hero h1{
+font-size:46px;
+margin-bottom:10px
+}
 
-section{padding:70px 20px;max-width:1100px;margin:auto}
+.hero p{
+font-size:18px;
+margin:6px 0
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.cta{
+background:var(--secondary);
+color:white;
+padding:16px 36px;
+border-radius:12px;
+display:inline-block;
+margin-top:30px;
+font-weight:600;
+text-decoration:none
+}
 
-.card{background:white;padding:35px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+.cta:hover{
+background:#15803d
+}
 
-.button{display:inline-block;padding:15px 30px;background:#16a34a;color:white;text-decoration:none;border-radius:8px;font-weight:bold;margin-top:25px}
+.container{
+max-width:1200px;
+margin:auto;
+padding:80px 20px
+}
 
-.button:hover{background:#15803d}
+h2{
+color:var(--primary);
+font-size:32px;
+margin-bottom:30px;
+text-align:center
+}
 
-.highlight{background:#ecfdf5;padding:40px;border-radius:12px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px
+}
 
-footer{text-align:center;background:#e5e7eb;padding:35px;font-size:14px}
+.card{
+background:white;
+padding:40px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:all .3s
+}
 
+.card:hover{
+transform:translateY(-8px)
+}
+
+.about{
+max-width:900px;
+margin:auto;
+font-size:17px
+}
+
+.highlight{
+background:white;
+padding:50px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
+text-align:center
+}
+
+.section-soft{
+background:#ecfdf5
+}
+
+.map iframe{
+width:100%;
+height:320px;
+border:0;
+border-radius:14px
+}
+
+.contact-box{
+max-width:600px;
+margin:auto;
+text-align:center
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.2)
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:40px;
+text-align:center;
+margin-top:60px
+}
 </style></head><body><nav>
 <a href="#sobre">Sobre</a>
-<a href="#areas">Áreas de atuação</a>
+<a href="#atuacao">Especialidades</a>
 <a href="#consulta">Consulta</a>
 <a href="#local">Local</a>
 <a href="#contato">Contato</a>
-</nav><header><h1>Dr. Levy de Aguiar Pontes</h1><p><strong>Médico em Fortaleza • Medicina Interna e Diagnóstica</strong></p><p>CRM 20.935 • RQE 18.539</p><p><em>Diagnóstico preciso com olhar humanizado</em></p><a class="button" href="https://wa.me/5588997719281">Agendar consulta pelo WhatsApp</a>
-
-</header><section id="sobre"><div class="card"><h2>Sobre o Médico</h2><p>
-Dr. Levy de Aguiar Pontes é médico especialista em Medicina Interna e Diagnóstica, com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.
-</p><p>
-Seu trabalho é focado em diagnóstico preciso, investigação clínica detalhada e acompanhamento de doenças crônicas. O atendimento é particular e voltado para pacientes que buscam uma avaliação médica completa e individualizada.
-</p><p>
-A Medicina Interna permite uma análise global da saúde do paciente, integrando histórico clínico, sintomas e exames para definir o melhor plano de cuidado.
-</p></div></section><section id="areas"><h2>Áreas de Atuação</h2><div class="grid"><div class="card">
+</nav><section class="hero">
+<h1>Dr. Levy de Aguiar Pontes</h1>
+<p><strong>Médico em Fortaleza • Medicina Interna</strong></p>
+<p>CRM 20.935 • RQE 18.539</p>
+<p><em>Diagnóstico preciso com olhar humanizado</em></p>
+<a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
+</section><section class="container" id="sobre">
+<h2>Sobre o Médico</h2>
+<div class="about">
+<p>
+Dr. Levy de Aguiar Pontes é especialista em Medicina Interna e Diagnóstica com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.
+</p>
+<p>
+Seu trabalho é focado em investigação clínica detalhada, diagnóstico preciso e acompanhamento de doenças crônicas, oferecendo atendimento particular humanizado e individualizado.
+</p>
+</div>
+</section><section class="container section-soft" id="atuacao">
+<h2>Áreas de Atuação</h2>
+<div class="grid"><div class="card">
 <h3>Check‑up Médico</h3>
-<p>Avaliação completa da saúde para prevenção de doenças e diagnóstico precoce.</p>
+<p>Avaliação clínica completa para prevenção e diagnóstico precoce.</p>
 </div><div class="card">
 <h3>Doenças Crônicas</h3>
-<p>Acompanhamento de hipertensão, diabetes, colesterol alto e outras condições clínicas.</p>
+<p>Acompanhamento clínico de hipertensão, diabetes e outras condições.</p>
 </div><div class="card">
 <h3>Investigação Diagnóstica</h3>
-<p>Análise clínica detalhada para identificar causas de sintomas persistentes.</p>
+<p>Análise detalhada de sintomas persistentes e diagnósticos complexos.</p>
 </div><div class="card">
 <h3>Avaliação Geriátrica</h3>
 <p>Cuidado especializado para saúde do idoso e envelhecimento saudável.</p>
-</div></div></section><section id="consulta"><div class="highlight"><h2>Consulta Médica Particular em Fortaleza</h2><p>
-A consulta médica com internista permite uma avaliação clínica aprofundada, considerando histórico de saúde, fatores de risco e exames complementares.
-</p><p>
-Esse modelo de consulta é ideal para pacientes que buscam investigação diagnóstica detalhada, segunda opinião médica ou acompanhamento de doenças crônicas.
-</p></div></section><section id="local"><h2>Locais de Atendimento</h2><div class="card"><p><strong>Instituto Logos</strong><br>
-Scopa Platinum Corporate<br>
-Fortaleza – CE
-</p><p><strong>Clínica Seer Saúde</strong></p><iframe
-width="100%"
-height="300"
-style="border:0;margin-top:20px;border-radius:10px"
-loading="lazy"
-allowfullscreen
-src="https://www.google.com/maps?q=Scopa+Platinum+Corporate+Fortaleza&output=embed">
-</iframe></div></section><section id="contato"><h2>Contato e Agendamento</h2><div class="card"><p><strong>WhatsApp:</strong> (88) 99771‑9281</p><p><strong>Instagram:</strong> @levypontes.diagnostico</p><a class="button" href="https://wa.me/5588997719281">Agendar consulta</a>
+</div></div>
+</section><section class="container" id="consulta">
+<div class="highlight">
+<h2>Consulta Médica Particular em Fortaleza</h2>
+<p>
+A consulta com médico internista permite avaliação completa da saúde, integrando histórico clínico, sintomas e exames para definição diagnóstica precisa.
+</p>
+<p>
+Indicada para check‑up médico, segunda opinião e investigação clínica aprofundada.
+</p>
+<a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
+</div>
+</section><section class="container" id="local">
+<h2>Local de Atendimento</h2>
+<div class="card map">
+<p><strong>Instituto Logos</strong><br>Scopa Platinum Corporate<br>Fortaleza – CE</p>
+<p><strong>Clínica Seer Saúde</strong></p>
+<iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Scopa+Platinum+Corporate+Fortaleza&output=embed"></iframe>
+</div>
+</section><section class="container" id="contato">
+<h2>Contato</h2>
+<div class="contact-box">
+<p><strong>WhatsApp:</strong> (88) 99771‑9281</p>
+<p><strong>Instagram:</strong> @levypontes.diagnostico</p>
+<a class="cta" href="https://wa.me/5588997719281">Agendar pelo WhatsApp</a>
+</div>
+</section><a class="whatsapp" href="https://wa.me/5588997719281">WhatsApp</a>
 
-</div></section><footer>© 2026 Dr. Levy de Aguiar Pontes • Médico em Fortaleza
-
+<footer>
+© 2026 Dr. Levy de Aguiar Pontes • Médico em Fortaleza
 </footer><script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "Physician",
-"name": "Dr. Levy de Aguiar Pontes",
-"medicalSpecialty": "Internal Medicine",
-"address": {
-"@type": "PostalAddress",
-"addressLocality": "Fortaleza",
-"addressRegion": "CE",
-"addressCountry": "BR"
-},
-"telephone": "+55 88 99771-9281",
-"url": "https://site-dr-levy.vercel.app"
+"@context":"https://schema.org",
+"@type":"Physician",
+"name":"Dr. Levy de Aguiar Pontes",
+"medicalSpecialty":"Internal Medicine",
+"address":{"@type":"PostalAddress","addressLocality":"Fortaleza","addressRegion":"CE","addressCountry":"BR"},
+"telephone":"+5588997719281",
+"url":"https://site-dr-levy.vercel.app"
 }
 </script></body>
 </html>
