@@ -46,19 +46,12 @@ font-size:15px
 .hero{
 background:linear-gradient(135deg,#0f766e,#0d9488);
 color:white;
-padding:120px 20px;
+padding:130px 20px;
 text-align:center
 }
 
-.hero h1{
-font-size:46px;
-margin-bottom:10px
-}
-
-.hero p{
-font-size:18px;
-margin:6px 0
-}
+.hero h1{font-size:48px;margin-bottom:10px}
+.hero p{font-size:18px;margin:6px 0}
 
 .cta{
 background:var(--secondary);
@@ -71,28 +64,13 @@ font-weight:600;
 text-decoration:none
 }
 
-.cta:hover{
-background:#15803d
-}
+.cta:hover{background:#15803d}
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:80px 20px
-}
+.container{max-width:1200px;margin:auto;padding:90px 20px}
 
-h2{
-color:var(--primary);
-font-size:32px;
-margin-bottom:30px;
-text-align:center
-}
+h2{color:var(--primary);font-size:34px;margin-bottom:30px;text-align:center}
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
 
 .card{
 background:white;
@@ -102,40 +80,50 @@ box-shadow:0 15px 40px rgba(0,0,0,0.08);
 transition:all .3s
 }
 
-.card:hover{
-transform:translateY(-8px)
-}
+.card:hover{transform:translateY(-8px)}
 
-.about{
-max-width:900px;
-margin:auto;
-font-size:17px
-}
+.about{max-width:900px;margin:auto;font-size:17px;text-align:center}
 
 .highlight{
 background:white;
-padding:50px;
+padding:55px;
 border-radius:16px;
 box-shadow:0 15px 40px rgba(0,0,0,0.06);
 text-align:center
 }
 
-.section-soft{
-background:#ecfdf5
+.section-soft{background:#ecfdf5}
+
+.photo{
+width:180px;
+height:180px;
+border-radius:50%;
+background:#e5e7eb;
+margin:30px auto
 }
 
-.map iframe{
-width:100%;
-height:320px;
-border:0;
-border-radius:14px
+.testimonials{max-width:900px;margin:auto}
+
+.testimonial{
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+margin-bottom:20px
 }
 
-.contact-box{
-max-width:600px;
-margin:auto;
-text-align:center
+.map iframe{width:100%;height:320px;border:0;border-radius:14px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+
+.blog-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.07)
 }
+
+.contact-box{max-width:600px;margin:auto;text-align:center}
 
 .whatsapp{
 position:fixed;
@@ -150,17 +138,12 @@ text-decoration:none;
 box-shadow:0 10px 25px rgba(0,0,0,0.2)
 }
 
-footer{
-background:var(--dark);
-color:white;
-padding:40px;
-text-align:center;
-margin-top:60px
-}
+footer{background:var(--dark);color:white;padding:40px;text-align:center;margin-top:60px}
 </style></head><body><nav>
 <a href="#sobre">Sobre</a>
 <a href="#atuacao">Especialidades</a>
-<a href="#consulta">Consulta</a>
+<a href="#diferenciais">Diferenciais</a>
+<a href="#blog">Conteúdo</a>
 <a href="#local">Local</a>
 <a href="#contato">Contato</a>
 </nav><section class="hero">
@@ -171,39 +154,36 @@ margin-top:60px
 <a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
 </section><section class="container" id="sobre">
 <h2>Sobre o Médico</h2>
+<div class="photo"></div>
 <div class="about">
 <p>
-Dr. Levy de Aguiar Pontes é especialista em Medicina Interna e Diagnóstica com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.
+Especialista em Medicina Interna e Diagnóstica com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.
 </p>
 <p>
-Seu trabalho é focado em investigação clínica detalhada, diagnóstico preciso e acompanhamento de doenças crônicas, oferecendo atendimento particular humanizado e individualizado.
+Atendimento focado em investigação clínica detalhada, diagnóstico preciso e acompanhamento de doenças crônicas.
 </p>
 </div>
 </section><section class="container section-soft" id="atuacao">
 <h2>Áreas de Atuação</h2>
-<div class="grid"><div class="card">
-<h3>Check‑up Médico</h3>
-<p>Avaliação clínica completa para prevenção e diagnóstico precoce.</p>
-</div><div class="card">
-<h3>Doenças Crônicas</h3>
-<p>Acompanhamento clínico de hipertensão, diabetes e outras condições.</p>
-</div><div class="card">
-<h3>Investigação Diagnóstica</h3>
-<p>Análise detalhada de sintomas persistentes e diagnósticos complexos.</p>
-</div><div class="card">
-<h3>Avaliação Geriátrica</h3>
-<p>Cuidado especializado para saúde do idoso e envelhecimento saudável.</p>
-</div></div>
-</section><section class="container" id="consulta">
-<div class="highlight">
-<h2>Consulta Médica Particular em Fortaleza</h2>
-<p>
-A consulta com médico internista permite avaliação completa da saúde, integrando histórico clínico, sintomas e exames para definição diagnóstica precisa.
-</p>
-<p>
-Indicada para check‑up médico, segunda opinião e investigação clínica aprofundada.
-</p>
-<a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
+<div class="grid">
+<div class="card"><h3>Check‑up Médico</h3><p>Avaliação clínica completa para prevenção de doenças.</p></div>
+<div class="card"><h3>Doenças Crônicas</h3><p>Acompanhamento clínico de hipertensão, diabetes e outras condições.</p></div>
+<div class="card"><h3>Investigação Diagnóstica</h3><p>Análise detalhada de sintomas persistentes.</p></div>
+<div class="card"><h3>Avaliação Geriátrica</h3><p>Cuidado especializado para saúde do idoso.</p></div>
+</div>
+</section><section class="container" id="diferenciais">
+<h2>Por que escolher o Dr. Levy</h2>
+<div class="grid">
+<div class="card"><h3>Consulta detalhada</h3><p>Avaliação clínica completa com tempo adequado para escuta do paciente.</p></div>
+<div class="card"><h3>Diagnóstico preciso</h3><p>Investigação clínica cuidadosa baseada em evidência científica.</p></div>
+<div class="card"><h3>Atendimento humanizado</h3><p>Cuidado centrado na pessoa e não apenas na doença.</p></div>
+</div>
+</section><section class="container" id="blog">
+<h2>Conteúdo de Saúde</h2>
+<div class="blog-grid">
+<div class="blog-card"><h3>Quando procurar um médico internista?</h3><p>Entenda quando a avaliação clínica especializada é indicada.</p></div>
+<div class="blog-card"><h3>O que inclui um check‑up médico?</h3><p>Saiba como funciona uma avaliação preventiva completa.</p></div>
+<div class="blog-card"><h3>Sintomas que precisam investigação</h3><p>Alguns sinais do corpo não devem ser ignorados.</p></div>
 </div>
 </section><section class="container" id="local">
 <h2>Local de Atendimento</h2>
