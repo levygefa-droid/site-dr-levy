@@ -1,129 +1,238 @@
-<!DOCTYPE html><html lang="pt-BR">
+ <!DOCTYPE html><html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Levy de Aguiar Pontes | Médico em Fortaleza</title>
-<meta name="description" content="Consulta médica particular em Fortaleza com Dr. Levy de Aguiar Pontes. Medicina Interna, diagnóstico clínico preciso e atendimento humanizado." />
-<meta name="google-site-verification" content="uaP1oCpwyUjrR799nOf2RbM8Pkxb10s6ObS48702ezc" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
-:root{
---primary:#0f766e;
---secondary:#16a34a;
---dark:#0f172a;
---light:#f8fafc;
---text:#1f2937;
-}
-
-*{box-sizing:border-box}
+<meta name="description" content="Consulta médica em Fortaleza com Dr. Levy de Aguiar Pontes. Medicina interna, diagnóstico preciso e atendimento humanizado."><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><!-- Google Analytics (substituir pelo ID real depois) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date());
+gtag('config', 'G-XXXX');
+</script><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
-font-family:'Inter',sans-serif;
-margin:0;
-background:var(--light);
-color:var(--text);
-line-height:1.6
+font-family:'Poppins',sans-serif;
+background:#050b18;
+color:white;
+overflow-x:hidden
 }
 
-nav{
-position:sticky;
-top:0;
-background:white;
-padding:18px;
+/* INTRO CINEMATOGRAFICA */
+
+#intro{
+position:fixed;
+width:100%;
+height:100vh;
+background:#050b18;
 display:flex;
 justify-content:center;
-gap:30px;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
-z-index:100
+align-items:center;
+z-index:2000;
+flex-direction:column;
+animation:introFade 2.5s forwards;
+animation-delay:2.5s
+}
+
+#intro h1{
+font-size:48px;
+letter-spacing:3px;
+animation:fadeUp 1.5s
+}
+
+#intro p{opacity:0.7;margin-top:10px}
+
+@keyframes introFade{
+0%{opacity:1}
+100%{opacity:0;visibility:hidden}
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 40px;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000
 }
 
 nav a{
+color:white;
 text-decoration:none;
-font-weight:600;
-color:var(--primary);
-font-size:15px
+margin-left:25px;
+font-weight:500;
+transition:0.3s
 }
+
+nav a:hover{opacity:0.7}
+
+/* HERO */
 
 .hero{
-background:linear-gradient(135deg,#0f766e,#0d9488);
-color:white;
-padding:130px 20px;
-text-align:center
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.9)),url('foto1.jpg');
+background-size:cover;
+background-position:center;
+padding:20px
 }
 
-.hero h1{font-size:48px;margin-bottom:10px}
-.hero p{font-size:18px;margin:6px 0}
+.hero h1{
+font-size:64px;
+margin-bottom:15px;
+animation:fadeUp 1.5s
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+animation:fadeUp 2s
+}
 
 .cta{
-background:var(--secondary);
+margin-top:35px;
+padding:16px 40px;
+background:#22c55e;
+border-radius:40px;
 color:white;
-padding:16px 36px;
-border-radius:12px;
-display:inline-block;
-margin-top:30px;
 font-weight:600;
-text-decoration:none
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+animation:fadeUp 2.5s
 }
 
-.cta:hover{background:#15803d}
+.cta:hover{transform:scale(1.08)}
 
-.container{max-width:1200px;margin:auto;padding:90px 20px}
+section{
+padding:110px 20px;
+max-width:1200px;
+margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all .8s
+}
 
-h2{color:var(--primary);font-size:34px;margin-bottom:30px;text-align:center}
+h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6)
+}
+
+.about p{font-size:18px;line-height:1.7;margin-bottom:15px}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+margin-top:60px
+}
+
+.stat{
+background:#0f172a;
+padding:30px;
+border-radius:16px
+}
+
+.stat h3{font-size:40px;color:#22c55e}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px
+}
 
 .card{
-background:white;
-padding:40px;
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-transition:all .3s
+background:#0f172a;
+padding:35px;
+border-radius:18px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.05)
 }
 
-.card:hover{transform:translateY(-8px)}
-
-.about{max-width:900px;margin:auto;font-size:17px;text-align:center}
-
-.highlight{
-background:white;
-padding:55px;
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
-text-align:center
+.card:hover{
+transform:translateY(-12px) scale(1.02);
+background:#1e293b
 }
 
-.section-soft{background:#ecfdf5}
-
-.photo{
-width:180px;
-height:180px;
-border-radius:50%;
-background:#e5e7eb;
-margin:30px auto
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
 }
 
-.testimonials{max-width:900px;margin:auto}
+.gallery img{
+width:100%;
+border-radius:14px;
+transition:0.4s
+}
+
+.gallery img:hover{transform:scale(1.05)}
+
+.blog{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+
+.post{
+background:#0f172a;
+padding:25px;
+border-radius:16px
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px
+}
 
 .testimonial{
-background:white;
+background:#0f172a;
 padding:30px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-margin-bottom:20px
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.05);
+font-style:italic
 }
 
-.map iframe{width:100%;height:320px;border:0;border-radius:14px}
-
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-
-.blog-card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 25px rgba(0,0,0,0.07)
+.map iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:16px
 }
 
-.contact-box{max-width:600px;margin:auto;text-align:center}
+.cta-section{
+background:linear-gradient(120deg,#0f766e,#059669);
+padding:90px 20px;
+text-align:center;
+border-radius:20px
+}
 
 .whatsapp{
 position:fixed;
@@ -131,93 +240,189 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-padding:16px 20px;
+padding:16px 22px;
 border-radius:50px;
 font-weight:600;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.2)
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+animation:pulse 2s infinite
 }
 
-footer{background:var(--dark);color:white;padding:40px;text-align:center;margin-top:60px}
-</style></head><body><nav>
-<a href="#sobre">Sobre</a>
-<a href="#atuacao">Especialidades</a>
-<a href="#diferenciais">Diferenciais</a>
-<a href="#blog">Conteúdo</a>
-<a href="#local">Local</a>
-<a href="#contato">Contato</a>
-</nav><section class="hero">
-<h1>Dr. Levy de Aguiar Pontes</h1>
-<p><strong>Médico em Fortaleza • Medicina Interna</strong></p>
-<p>CRM 20.935 • RQE 18.539</p>
-<p><em>Diagnóstico preciso com olhar humanizado</em></p>
-<a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
-</section><section class="container" id="sobre">
-<h2>Sobre o Médico</h2>
-  <img src="foto1.jpg">
-<img src="foto2.jpg">
-<img src="foto3.jpg">
-<img src="foto4.jpg">
-<img src="foto5.jpg">
-<img src="foto6.jpg">
-<div class="photo"></div>
-<div class="about">
-<p>
-Especialista em Medicina Interna e Diagnóstica com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.
-</p>
-<p>
-Atendimento focado em investigação clínica detalhada, diagnóstico preciso e acompanhamento de doenças crônicas.
-</p>
-</div>
-</section><section class="container section-soft" id="atuacao">
-<h2>Áreas de Atuação</h2>
-<div class="grid">
-<div class="card"><h3>Check‑up Médico</h3><p>Avaliação clínica completa para prevenção de doenças.</p></div>
-<div class="card"><h3>Doenças Crônicas</h3><p>Acompanhamento clínico de hipertensão, diabetes e outras condições.</p></div>
-<div class="card"><h3>Investigação Diagnóstica</h3><p>Análise detalhada de sintomas persistentes.</p></div>
-<div class="card"><h3>Avaliação Geriátrica</h3><p>Cuidado especializado para saúde do idoso.</p></div>
-</div>
-</section><section class="container" id="diferenciais">
-<h2>Por que escolher o Dr. Levy</h2>
-<div class="grid">
-<div class="card"><h3>Consulta detalhada</h3><p>Avaliação clínica completa com tempo adequado para escuta do paciente.</p></div>
-<div class="card"><h3>Diagnóstico preciso</h3><p>Investigação clínica cuidadosa baseada em evidência científica.</p></div>
-<div class="card"><h3>Atendimento humanizado</h3><p>Cuidado centrado na pessoa e não apenas na doença.</p></div>
-</div>
-</section><section class="container" id="blog">
-<h2>Conteúdo de Saúde</h2>
-<div class="blog-grid">
-<div class="blog-card"><h3>Quando procurar um médico internista?</h3><p>Entenda quando a avaliação clínica especializada é indicada.</p></div>
-<div class="blog-card"><h3>O que inclui um check‑up médico?</h3><p>Saiba como funciona uma avaliação preventiva completa.</p></div>
-<div class="blog-card"><h3>Sintomas que precisam investigação</h3><p>Alguns sinais do corpo não devem ser ignorados.</p></div>
-</div>
-</section><section class="container" id="local">
-<h2>Local de Atendimento</h2>
-<div class="card map">
-<p><strong>Instituto Logos</strong><br>Scopa Platinum Corporate<br>Fortaleza – CE</p>
-<p><strong>Clínica Seer Saúde</strong></p>
-<iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Scopa+Platinum+Corporate+Fortaleza&output=embed"></iframe>
-</div>
-</section><section class="container" id="contato">
-<h2>Contato</h2>
-<div class="contact-box">
-<p><strong>WhatsApp:</strong> (88) 99771‑9281</p>
-<p><strong>Instagram:</strong> @levypontes.diagnostico</p>
-<a class="cta" href="https://wa.me/5588997719281">Agendar pelo WhatsApp</a>
-</div>
-</section><a class="whatsapp" href="https://wa.me/5588997719281">WhatsApp</a>
+footer{
+text-align:center;
+padding:40px;
+background:#020617;
+margin-top:60px;
+font-size:14px;
+opacity:0.8
+}
 
-<footer>
-© 2026 Dr. Levy de Aguiar Pontes • Médico em Fortaleza
-</footer><script type="application/ld+json">
+@keyframes fadeUp{
+0%{opacity:0;transform:translateY(40px)}
+100%{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+@media(max-width:900px){
+.about{grid-template-columns:1fr}
+.hero h1{font-size:42px}
+}
+</style><script>
+window.addEventListener("scroll",()=>{
+ document.querySelectorAll("section").forEach(sec=>{
+  const top = sec.getBoundingClientRect().top
+  if(top < window.innerHeight-100){
+   sec.style.opacity = 1
+   sec.style.transform = "translateY(0)"
+  }
+ })
+})
+</script><!-- SEO Estruturado --><script type="application/ld+json">
 {
 "@context":"https://schema.org",
 "@type":"Physician",
 "name":"Dr. Levy de Aguiar Pontes",
 "medicalSpecialty":"Internal Medicine",
-"address":{"@type":"PostalAddress","addressLocality":"Fortaleza","addressRegion":"CE","addressCountry":"BR"},
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Fortaleza",
+"addressRegion":"CE",
+"addressCountry":"BR"
+},
 "telephone":"+5588997719281",
-"url":"https://site-dr-levy.vercel.app"
+"url":"https://www.drlevypontes.com.br"
 }
-</script></body>
+</script></head><body><div id="intro">
+<h1>Dr. Levy Pontes</h1>
+<p>Medicina Interna • Fortaleza</p>
+</div><nav>
+<div><strong>Dr Levy Pontes</strong></div>
+<div>
+<a href="#sobre">Sobre</a>
+<a href="#diferenciais">Diferenciais</a>
+<a href="#galeria">Consultório</a>
+<a href="#blog">Conteúdo</a>
+<a href="#avaliacoes">Avaliações</a>
+<a href="#local">Local</a>
+<a href="#contato">Contato</a>
+</div>
+</nav><section class="hero">
+<h1>Dr. Levy de Aguiar Pontes</h1>
+<p>Médico em Fortaleza • Medicina Interna</p>
+<p>Diagnóstico preciso com olhar humanizado</p>
+<a class="cta" href="https://wa.me/5588997719281">Agendar Consulta</a>
+</section><section id="sobre">
+<h2>Sobre o Médico</h2>
+<div class="about">
+<img src="foto2.jpg">
+<div>
+<p>Especialista em Medicina Interna com pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein.</p>
+<p>Atendimento focado em investigação clínica detalhada, diagnóstico preciso e acompanhamento individualizado.</p>
+</div>
+</div><div class="stats">
+<div class="stat"><h3>+10</h3><p>Anos de experiência</p></div>
+<div class="stat"><h3>+1000</h3><p>Pacientes atendidos</p></div>
+<div class="stat"><h3>100%</h3><p>Consulta personalizada</p></div>
+</div>
+</section><section id="diferenciais">
+<h2>Diferenciais</h2>
+<div class="cards">
+<div class="card"><h3>Consulta detalhada</h3><p>Avaliação clínica profunda com tempo adequado.</p></div>
+<div class="card"><h3>Diagnóstico preciso</h3><p>Investigação baseada em evidência científica.</p></div>
+<div class="card"><h3>Atendimento humanizado</h3><p>Cuidado centrado na pessoa.</p></div>
+<div class="card"><h3>Experiência clínica</h3><p>Formação sólida em medicina interna.</p></div>
+</div>
+</section><section id="galeria">
+<h2>Ambiente e Atendimento</h2>
+<div class="gallery">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="foto5.jpg">
+<img src="foto6.jpg">
+</div>
+</section><section id="blog">
+<h2>Conteúdo Médico</h2>
+<div class="blog">
+<div class="post"><h3>Quando procurar um médico internista?</h3><p>Entenda quando a avaliação clínica completa é necessária.</p></div>
+<div class="post"><h3>O que é um check‑up médico?</h3><p>Saiba como funciona a avaliação preventiva.</p></div>
+<div class="post"><h3>Sintomas que precisam investigação</h3><p>Alguns sinais do corpo não devem ser ignorados.</p></div>
+</div>
+</section><section id="avaliacoes">
+<h2>Avaliações de Pacientes</h2>
+<div class="testimonials">
+<div class="testimonial">"Consulta extremamente cuidadosa e detalhada."</div>
+<div class="testimonial">"Excelente médico em Fortaleza."</div>
+<div class="testimonial">"Investigação clínica muito precisa."</div>
+</div>
+</section><section id="local">
+<h2>Local de Atendimento</h2>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Scopa%20Platinum%20Corporate%20Fortaleza&output=embed"></iframe>
+</div>
+</section><section class="cta-section" id="contato">
+<h2>Agende sua consulta</h2>
+<p>Consulta médica particular em Fortaleza</p>
+<a class="cta" href="https://wa.me/5588997719281">Agendar pelo WhatsApp</a>
+</section><a class="whatsapp" href="https://wa.me/5588997719281">WhatsApp</a>
+
+<footer>
+© 2026 Dr. Levy de Aguiar Pontes • Médico em Fortaleza
+</footer><!-- Google Reviews Section (manual placeholder) --><section id="reviews" style="padding:110px 20px;max-width:1100px;margin:auto">
+<h2 style="text-align:center;font-size:38px;margin-bottom:40px">Avaliações no Google</h2>
+<div class="testimonials">
+<div class="testimonial">★★★★★ "Excelente médico. Consulta detalhada e muito humana."</div>
+<div class="testimonial">★★★★★ "Profissional extremamente competente. Recomendo."</div>
+<div class="testimonial">★★★★★ "Investigação clínica muito cuidadosa."</div>
+</div>
+</section><!-- Simple appointment form --><section id="agendamento" style="padding:110px 20px;max-width:900px;margin:auto;text-align:center">
+<h2>Solicitar Agendamento</h2>
+<p style="margin-bottom:30px">Envie sua solicitação e entraremos em contato.</p>
+<form style="display:grid;gap:15px">
+<input placeholder="Nome" style="padding:12px;border-radius:8px;border:none">
+<input placeholder="Telefone" style="padding:12px;border-radius:8px;border:none">
+<input placeholder="Email" style="padding:12px;border-radius:8px;border:none">
+<textarea placeholder="Mensagem" style="padding:12px;border-radius:8px;border:none"></textarea>
+<button style="padding:14px;background:#22c55e;border:none;border-radius:8px;color:white;font-weight:600">Enviar</button>
+</form>
+</section><!-- SEO text section --><section style="padding:110px 20px;max-width:900px;margin:auto;text-align:center">
+<h2>Médico em Fortaleza</h2>
+<p>
+Se você procura médico em Fortaleza com abordagem clínica completa, o Dr. Levy de Aguiar Pontes oferece consulta médica detalhada, investigação diagnóstica e acompanhamento personalizado.
+</p>
+</section><!-- Animated counters script --><script>
+const counters=document.querySelectorAll('.stat h3');
+counters.forEach(counter=>{
+ let target=counter.innerText.replace('+','').replace('%','');
+ let count=0;
+ let inc=target/100;
+ function update(){
+  count+=inc;
+  if(count<target){
+   counter.innerText=Math.floor(count)+(counter.innerText.includes('%')?'%':'+');
+   requestAnimationFrame(update);
+  }else{
+   counter.innerText=counter.innerText;
+  }
+ }
+ update();
+});
+</script><!-- Simple blog SEO text --><section style="padding:100px 20px;max-width:900px;margin:auto;text-align:center">
+<h2>Consulta Médica em Fortaleza</h2>
+<p>
+O atendimento com médico internista em Fortaleza permite avaliação completa da saúde, investigação de sintomas persistentes e acompanhamento de doenças crônicas como hipertensão, diabetes e condições complexas.
+</p>
+<p>
+Dr. Levy de Aguiar Pontes realiza consulta clínica detalhada com foco em diagnóstico preciso e cuidado humanizado.
+</p>
+</section><!-- Extra CTA --><section style="padding:100px 20px;text-align:center;background:#0f172a">
+<h2>Agende sua consulta agora</h2>
+<p style="margin-bottom:25px">Atendimento particular em Fortaleza</p>
+<a href="https://wa.me/5588997719281" style="background:#22c55e;padding:16px 32px;border-radius:40px;color:white;text-decoration:none;font-weight:600">Falar no WhatsApp</a>
+</section></body>
+</html></body>
 </html>
