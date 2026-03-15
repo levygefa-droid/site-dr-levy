@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Levy de Aguiar Pontes | Medicina Interna em Fortaleza</title>
-<meta name="description" content="Dr. Levy de Aguiar Pontes – Médico especialista em Medicina Interna em Fortaleza. Diagnóstico preciso com atendimento humanizado."><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+<meta name="description" content="Dr. Levy de Aguiar Pontes – Médico especialista em Medicina Interna em Fortaleza. Diagnóstico preciso e atendimento humanizado."><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
 
 *{margin:0;padding:0;box-sizing:border-box}
 
@@ -19,17 +19,33 @@ font-family:'Playfair Display',serif;
 color:#0f172a
 }
 
-nav{
+/* HEADER */
+
+header{
 position:fixed;
 top:0;
 width:100%;
 background:white;
-padding:18px 40px;
+padding:14px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,0.05);
+box-shadow:0 2px 20px rgba(0,0,0,0.05);
 z-index:1000
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+font-size:18px
+}
+
+.logo img{
+width:40px;
+height:40px;
+border-radius:8px
 }
 
 nav a{
@@ -41,21 +57,23 @@ font-weight:500
 
 nav a:hover{color:#059669}
 
+/* HERO */
+
 .hero{
-height:90vh;
+height:85vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
-background:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.9)),url('foto1.jpg');
+background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.9)),url('foto1.jpg');
 background-size:cover;
 background-position:center
 }
 
 .hero h1{
-font-size:54px;
-margin-bottom:12px
+font-size:52px;
+margin-bottom:10px
 }
 
 .hero p{
@@ -65,7 +83,7 @@ color:#475569
 
 .cta{
 display:inline-block;
-margin-top:30px;
+margin-top:28px;
 padding:14px 32px;
 background:#059669;
 color:white;
@@ -74,8 +92,6 @@ text-decoration:none;
 font-weight:500
 }
 
-.cta:hover{background:#047857}
-
 section{
 padding:90px 20px;
 max-width:1100px;
@@ -83,10 +99,12 @@ margin:auto
 }
 
 h2{
-font-size:36px;
+font-size:34px;
 margin-bottom:30px;
 text-align:center
 }
+
+/* ABOUT */
 
 .about{
 display:grid;
@@ -97,39 +115,43 @@ align-items:center
 
 .about img{
 width:100%;
-border-radius:14px
+border-radius:12px
 }
 
-.cards{
+/* SERVICE */
+
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:24px
 }
 
-.card{
+.service{
 background:white;
-padding:28px;
+padding:26px;
 border-radius:14px;
 box-shadow:0 10px 30px rgba(0,0,0,0.05)
 }
 
-.card h3{margin-bottom:10px}
+/* MEDICAL CARE PHOTOS */
 
-.gallery{
+.medical-gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px
 }
 
-.gallery img{
+.medical-gallery img{
 width:100%;
 border-radius:12px
 }
 
+/* TESTIMONIALS */
+
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px
+gap:20px
 }
 
 .testimonial{
@@ -140,12 +162,16 @@ box-shadow:0 10px 30px rgba(0,0,0,0.05);
 font-style:italic
 }
 
+/* MAP */
+
 .map iframe{
 width:100%;
 height:320px;
 border:0;
 border-radius:12px
 }
+
+/* CTA */
 
 .cta-section{
 background:#059669;
@@ -156,6 +182,8 @@ border-radius:14px
 }
 
 .cta-section h2{color:white}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -179,23 +207,26 @@ font-size:14px
 
 @media(max-width:900px){
 .about{grid-template-columns:1fr}
-.hero h1{font-size:40px}
+.hero h1{font-size:38px}
 }
 
-</style></head><body><nav>
-<div><strong>Dr Levy Pontes</strong></div>
-<div>
+</style></head><body><header>
+<div class="logo">
+<img src="logo.png" alt="Logo Dr Levy Pontes">
+<span>Dr Levy Pontes</span>
+</div><nav>
 <a href="#sobre">Sobre</a>
-<a href="#diferenciais">Diferenciais</a>
-<a href="#consultorio">Consultório</a>
+<a href="#servicos">Serviços</a>
+<a href="#atendimento">Atendimento</a>
 <a href="#avaliacoes">Avaliações</a>
+<a href="#local">Local</a>
 <a href="#contato">Contato</a>
-</div>
-</nav><section class="hero">
+</nav>
+</header><section class="hero">
 <div>
 <h1>Dr. Levy de Aguiar Pontes</h1>
-<p>Médico especialista em Medicina Interna</p>
-<p>Diagnóstico preciso com olhar humanizado</p>
+<p>Medicina Interna • Diagnóstico Clínico</p>
+<p>Atendimento médico humanizado em Fortaleza</p>
 <a class="cta" href="https://wa.me/5588997719281">Agendar consulta</a>
 </div>
 </section><section id="sobre">
@@ -204,45 +235,38 @@ font-size:14px
 <img src="foto2.jpg">
 <div>
 <p>
-Dr. Levy de Aguiar Pontes é especialista em Medicina Interna com atuação focada em diagnóstico clínico detalhado e acompanhamento integral do paciente.
+Dr. Levy de Aguiar Pontes é especialista em Medicina Interna com foco em diagnóstico clínico detalhado e acompanhamento integral do paciente.
 </p><p>
 Possui pós‑graduação em Geriatria pelo Hospital Israelita Albert Einstein e dedica sua prática à avaliação clínica cuidadosa e medicina baseada em evidências.
 </p>
 </div>
 </div>
-</section><section id="diferenciais">
-<h2>Diferenciais</h2>
-<div class="cards">
-<div class="card">
-<h3>Consulta detalhada</h3>
-<p>Avaliação clínica cuidadosa com tempo adequado para compreender o paciente.</p>
-</div><div class="card">
-<h3>Diagnóstico preciso</h3>
-<p>Investigação baseada em evidências e raciocínio clínico aprofundado.</p>
-</div><div class="card">
-<h3>Atendimento humanizado</h3>
-<p>Cuidado centrado na pessoa, respeitando história e contexto de cada paciente.</p>
-</div><div class="card">
+</section><section id="servicos">
+<h2>Atendimento Médico</h2>
+<div class="services"><div class="service">
+<h3>Consulta clínica completa</h3>
+<p>Avaliação detalhada dos sintomas e histórico médico.</p>
+</div><div class="service">
+<h3>Investigação diagnóstica</h3>
+<p>Análise cuidadosa de exames e sinais clínicos.</p>
+</div><div class="service">
 <h3>Acompanhamento clínico</h3>
-<p>Seguimento médico individualizado para condições agudas e crônicas.</p>
-</div>
-</div>
-</section><section id="consultorio">
-<h2>Consultório</h2>
-<div class="gallery">
-<img src="foto3.jpg">
-<img src="foto4.jpg">
-<img src="foto5.jpg">
-<img src="foto6.jpg">
-</div>
+<p>Seguimento médico personalizado.</p>
+</div><div class="service">
+<h3>Prevenção e check‑up</h3>
+<p>Avaliação preventiva e monitoramento da saúde.</p>
+</div></div>
+</section><section id="atendimento">
+<h2>Atendimento Médico</h2>
+<div class="medical-gallery"><img src="atendimento1.jpg" alt="Atendimento médico">
+<img src="atendimento2.jpg" alt="Consulta médica">
+<img src="atendimento3.jpg" alt="Médico atendendo paciente"></div>
 </section><section id="avaliacoes">
 <h2>Avaliações de Pacientes</h2>
-<div class="testimonials">
-<div class="testimonial">"Consulta extremamente cuidadosa e detalhada."</div>
+<div class="testimonials"><div class="testimonial">"Consulta extremamente cuidadosa e detalhada."</div>
 <div class="testimonial">"Excelente médico, muito atencioso."</div>
-<div class="testimonial">"Investigação clínica muito precisa."</div>
-</div>
-</section><section>
+<div class="testimonial">"Investigação clínica muito precisa."</div></div>
+</section><section id="local">
 <h2>Local de Atendimento</h2>
 <div class="map">
 <iframe src="https://www.google.com/maps?q=Scopa%20Platinum%20Corporate%20Fortaleza&output=embed"></iframe>
